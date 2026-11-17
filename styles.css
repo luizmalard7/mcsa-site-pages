@@ -909,6 +909,63 @@ h1 em:after {
     font-weight: 400
 }
 
+.blog-cta-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #d4cabd
+}
+
+.blog-cta-wrap>span {
+    color: var(--gold-dark);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em
+}
+
+.blog-cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--ink);
+    box-shadow: 0 0 0 0 #caa35f55;
+    animation: blog-cta-pulse 2.8s ease-in-out infinite
+}
+
+.blog-cta::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 10%, #caa35f4d 45%, transparent 70%);
+    transform: translateX(-120%);
+    animation: blog-cta-sheen 3.6s ease-in-out infinite
+}
+
+.blog-cta:hover {
+    animation-play-state: paused
+}
+
+@keyframes blog-cta-pulse {
+    50% { box-shadow: 0 0 0 8px #caa35f00 }
+}
+
+@keyframes blog-cta-sheen {
+    45%, 100% { transform: translateX(150%) }
+}
+
+@media (max-width: 560px) {
+    .blog-cta-wrap { align-items: stretch; flex-direction: column }
+    .blog-cta { justify-content: space-between }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blog-cta, .blog-cta::before { animation: none }
+}
+
 .careers {
     background: #f9f5ed;
     padding: 70px 0;
