@@ -127,11 +127,12 @@ h1 em {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
-    min-height: 56px;
-    padding: 0 24px;
-    font-size: 13px;
-    font-weight: 800;
+    gap: 22px;
+    min-height: 58px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 750;
     transition: transform .25s, background .25s, box-shadow .25s
 }
 
@@ -297,7 +298,13 @@ h1 em {
 }
 
 .menu-button {
-    display: none
+    display: none;
+    border-radius: 50%;
+    transition: background .25s
+}
+
+.menu-button:hover {
+    background: var(--cream)
 }
 
 .hero {
@@ -899,9 +906,10 @@ h1 em:after {
 .filter {
     background: transparent;
     border: 1px solid #c9c0b3;
-    padding: 10px 18px;
-    font-size: 12px;
-    font-weight: 800;
+    padding: 11px 19px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 750;
     color: #645f58;
     transition: background .2s, color .2s
 }
@@ -928,6 +936,7 @@ h1 em:after {
     background: #fff;
     padding: 26px;
     min-height: 250px;
+    border-radius: 20px;
     transition: transform .25s, box-shadow .25s
 }
 
@@ -1062,17 +1071,20 @@ h1 em:after {
 }
 
 .copy-button {
-    background: none;
-    border: 0;
-    border-bottom: 1px solid var(--gold-dark);
-    padding: 0 0 6px;
+    background: transparent;
+    border: 1px solid var(--gold-dark);
+    border-radius: 999px;
+    padding: 10px 18px;
     color: var(--ink);
-    font-weight: 800;
-    font-size: 12px
+    font-weight: 750;
+    font-size: 13px;
+    transition: background .25s, color .25s, transform .25s
 }
 
 .copy-button:hover {
-    color: var(--gold-dark)
+    color: var(--ink);
+    background: #f7edda;
+    transform: translateY(-2px)
 }
 
 .contact {
@@ -1281,6 +1293,7 @@ h1 em:after {
     background: var(--ink);
     color: #fff;
     border: 0;
+    border-radius: 50%;
     font-size: 25px
 }
 
@@ -1710,9 +1723,9 @@ button {
 }
 
 .button {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: -.015em;
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: -.025em;
     line-height: 1.25
 }
 
@@ -1725,20 +1738,26 @@ button {
 
 .text-action,
 .under-link,
-.copy-button,
 .featured-action,
 .post-arrow,
 .reading-back,
 .blog-hero-down {
-    font-weight: 700;
+    font-weight: 750;
     letter-spacing: -.01em
+}
+
+.copy-button,
+.reading-aside button {
+    font-weight: 750;
+    letter-spacing: -.02em
 }
 
 .filter,
 .blog-page .blog-filter {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: -.01em
+    font-size: 13px;
+    font-weight: 750;
+    letter-spacing: -.02em;
+    border-radius: 999px
 }
 
 @media(max-width:1100px) {
