@@ -2,7 +2,7 @@
 
 Site estático e responsivo feito em HTML, CSS e JavaScript. Os artigos abrem em uma janela interna e podem ser filtrados por assunto. A seção de método permite percorrer as quatro etapas pela rolagem ou pelos atalhos numerados. O contato usa o telefone público da MCSA e a área de carreiras permite copiar o e-mail de recrutamento.
 
-A abertura mostra Marcelo Candiotto com Carolina Sant’Ana, e a seção Sobre mostra Marcelo com Rodrigo Valle. As duas imagens são composições ilustrativas geradas a partir dos retratos públicos da equipe. Na abertura, a foto aproxima-se com a rolagem e a luz acompanha o ponteiro. Na seção de método, uma linha dourada acompanha a leitura. O site respeita a preferência do sistema por movimento reduzido, e a faixa de empresas tem um botão de pausa. As interações foram inspiradas no [site da VeriSeal](https://github.com/guilhermerezende-hub/-VeriSeal).
+A abertura mostra Marcelo Candiotto com Carolina Sant’Ana, e a seção Sobre mostra Marcelo com Rodrigo Valle. As duas imagens são composições ilustrativas geradas a partir dos retratos públicos da equipe. Na seção de método, uma linha dourada acompanha a leitura. O site respeita a preferência do sistema por movimento reduzido, e a faixa de empresas tem um botão de pausa. As interações foram inspiradas no [site da VeriSeal](https://github.com/guilhermerezende-hub/-VeriSeal).
 
 O destaque principal usa a frase “Seu crédito em foco / Negócios em movimento”. A faixa animada apresenta os nomes de empresas informados pelo cliente: Movida, Localiza, Itaú, Direcional Engenharia, VIC Engenharia, Cyrela, Tenda, Emcamp, DivBank, Tabelionato e LCM.
 

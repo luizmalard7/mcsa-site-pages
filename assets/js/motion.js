@@ -1,7 +1,6 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const pointerMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
 const hero = document.querySelector('.hero');
-const portrait = hero.querySelector('.photo-frame');
 const methodList = document.querySelector('.method-list');
 const steps = [...methodList.children];
 const stepLinks = [...document.querySelectorAll('.method-nav a')];
@@ -25,11 +24,6 @@ function updateScene() {
   const y = Math.max(window.scrollY, 0);
   const range = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.transform = `scaleX(${range > 0 ? clamp(y / range) : 0})`;
-
-  if (!reduceMotion.matches && y <= hero.offsetHeight) {
-    const zoom = 1.025 + clamp(y / hero.offsetHeight) * .085;
-    portrait.style.setProperty('--portrait-scale', zoom.toFixed(3));
-  }
 
   const listBox = methodList.getBoundingClientRect();
   const readingLine = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)
@@ -65,11 +59,10 @@ window.addEventListener('load', scheduleScene);
 if ('ResizeObserver' in window) new ResizeObserver(scheduleScene).observe(document.body);
 scheduleScene();
 
-for (const surface of [portrait, ...document.querySelectorAll('.solution-card')]) {
+for (const surface of document.querySelectorAll('.solution-card')) {
   function clearPointer() {
-    for (const key of ['--light-x', '--light-y', '--portrait-x', '--portrait-y']) {
-      surface.style.removeProperty(key);
-    }
+    surface.style.removeProperty('--light-x');
+    surface.style.removeProperty('--light-y');
   }
   surface.addEventListener('pointermove', event => {
     if (!pointerMotion.matches) return;
@@ -78,10 +71,6 @@ for (const surface of [portrait, ...document.querySelectorAll('.solution-card')]
     const y = clamp((event.clientY - rect.top) / rect.height);
     surface.style.setProperty('--light-x', `${x * 100}%`);
     surface.style.setProperty('--light-y', `${y * 100}%`);
-    if (surface === portrait) {
-      surface.style.setProperty('--portrait-x', `${(x - .5) * 6}px`);
-      surface.style.setProperty('--portrait-y', `${(y - .5) * 6}px`);
-    }
   });
   surface.addEventListener('pointerleave', clearPointer);
   pointerMotion.addEventListener('change', clearPointer);

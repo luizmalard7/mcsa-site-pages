@@ -41,16 +41,6 @@
     mask-image: linear-gradient(155deg, black, #0005 70%);
 }
 
-.photo-scan {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    background: radial-gradient(circle at var(--light-x, 50%) var(--light-y, 50%), #ffde9c30, transparent 32%);
-    opacity: 0;
-    transition: opacity .4s;
-}
-
 .hero-ticker { background: #302d29; border-block: 1px solid #a88c593f; position: relative; }
 .hero-ticker > div { animation-duration: 55s; }
 .hero-ticker.paused > div { animation-play-state: paused; }
@@ -75,10 +65,6 @@
     from { opacity: 0; translate: 0 14px; }
     to { opacity: 1; translate: 0 0; }
 }
-@keyframes portrait-in {
-    from { clip-path: inset(0 0 0 22%); opacity: 0; }
-    to { clip-path: inset(0); opacity: 1; }
-}
 
 @media (prefers-reduced-motion: no-preference) {
     .hero-ready .hero-word {
@@ -92,12 +78,6 @@
     .hero-ready .hero-description { animation-delay: .28s; }
     .hero-ready .hero-actions { animation-delay: .36s; }
     .hero-ready .hero-markers { animation-delay: .44s; }
-    .hero-ready .photo-frame { animation: portrait-in 1.05s var(--motion-ease) backwards; }
-    .photo-frame img {
-        transform: translate(var(--portrait-x, 0px), var(--portrait-y, 0px)) scale(var(--portrait-scale, 1.025));
-        transition: transform .25s ease-out;
-    }
-    .hero-ready .photo-stamp { animation: rise-in .7s .48s var(--motion-ease) backwards; }
     .js .reveal:not(.visible) { opacity: 0; transform: translateY(24px); }
     .reveal { transition: opacity .7s var(--motion-ease), transform .7s var(--motion-ease); }
     :is(.solutions-grid, .team-grid, .award-grid) > :nth-child(2) { transition-delay: 65ms; }
@@ -118,7 +98,6 @@
 }
 
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-    .hero-media:hover .photo-scan { opacity: 1; }
     .solution-card {
         background: radial-gradient(circle at var(--light-x, 50%) var(--light-y, 50%), #f3e9d9, transparent 56%) white;
     }
