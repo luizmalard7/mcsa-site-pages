@@ -30,4 +30,4 @@ Abra o `index.html` no navegador. Para testar com um servidor HTTP, execute `npx
 
 As informações foram consultadas em 16/11/2026. As imagens da pasta `assets/images/` foram obtidas do site institucional, com exceção de `marcelo-carolina.png` e `marcelo-rodrigo-valle.png`, criadas a partir dos retratos públicos e identificadas na página como composições ilustrativas. Todos os arquivos são servidos localmente pelo novo site. A página inicial da MCSA informa mais de 19 anos de experiência; a página “Sobre nós” ainda mostra 17 anos. Esta versão usa o dado da página inicial.
 
-O site não contém um formulário de envio porque não foi fornecido um destino de mensagens nem uma integração de atendimento. Os botões de contato levam à seção local e ao número 0800 divulgado pela MCSA.
+O site não contém um formulário de envio porque não foi fornecido um destino de mensagens nem uma integração de atendimento. Os botões de contato levam à seção local e ao telefone +55 31 9160-4000.

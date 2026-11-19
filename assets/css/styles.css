@@ -14,6 +14,8 @@
     --cream: #f0ece6;
     --line: #e3dfd8;
     --white: #fff;
+    --radius-card: 24px;
+    --radius-inset: 12px;
     --container: 1200px
 }
 
@@ -42,6 +44,32 @@ a {
 button {
     font: inherit;
     cursor: pointer
+}
+
+button,
+.button,
+.header-action {
+    border-radius: 999px;
+}
+
+.intro-image,
+.intro-image img,
+.person,
+.person img,
+.award-card,
+.solution-card,
+.article-card,
+.article-dialog,
+.careers-contact,
+.contact-card {
+    border-radius: var(--radius-card);
+}
+
+.award-card img,
+.intro-disclaimer,
+.toast,
+.skip-link {
+    border-radius: var(--radius-inset);
 }
 
 img {
@@ -318,7 +346,7 @@ h1 em {
 .hero-word { display: inline-block; }
 .hero-description { max-width: 45ch; color: #dedbd5; font-size: 1rem; line-height: 1.7; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 30px; }
-.hero .button-dark { background: var(--gold); color: var(--ink); border-radius: 100px; }
+.hero .button-dark { background: var(--gold); color: var(--ink); }
 .hero .button-dark:hover { background: #e6c789; }
 .under-link { display: inline-flex; gap: 12px; align-items: center; padding-block: 7px; border-bottom: 1px solid #a08c6c; font-size: 13px; font-weight: 700; }
 .under-link:hover { color: #e5c589; }
@@ -402,6 +430,7 @@ h1 em {
 }
 
 .image-label {
+    border-top-left-radius: var(--radius-inset);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -693,6 +722,7 @@ h1 em {
 }
 
 .article-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -701,12 +731,19 @@ h1 em {
     background: #fff;
     padding: 26px;
     min-height: 250px;
-    transition: transform .25s, box-shadow .25s
+    transition: transform .25s, box-shadow .25s, border-color .25s
 }
 
-.article-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 17px 30px #27252215
+.article-card:is(:hover, :focus-visible) {
+    z-index: 1;
+    border-color: var(--gold-dark);
+    box-shadow: 0 4px 9px #27252238, 0 16px 28px -6px #27252280;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .article-card:is(:hover, :focus-visible) {
+        transform: translateY(-4px);
+    }
 }
 
 .article-card>span {
@@ -779,9 +816,8 @@ h1 em {
 
 .copy-button {
     background: none;
-    border: 0;
-    border-bottom: 1px solid var(--gold-dark);
-    padding: 0 0 6px;
+    border: 1px solid var(--gold-dark);
+    padding: 9px 16px;
     color: var(--ink);
     font-weight: 800;
     font-size: 12px
@@ -1098,7 +1134,7 @@ h1 em {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        background: none;
+        background: var(--paper);
         border: 0;
         padding: 10px;
         margin-left: auto
@@ -1117,6 +1153,7 @@ h1 em {
         left: -20px;
         right: -20px;
         background: #fff;
+        border-radius: 0 0 var(--radius-card) var(--radius-card);
         padding: 15px 20px 22px;
         box-shadow: 0 20px 30px #0002;
         flex-direction: column;
