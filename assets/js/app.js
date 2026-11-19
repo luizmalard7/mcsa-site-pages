@@ -141,13 +141,6 @@ dialog.addEventListener('cancel', () => { document.body.style.overflow = ''; });
 dialog.addEventListener('click', event => { if (event.target === dialog) closeDialog(); });
 dialog.querySelector('.dialog-contact').addEventListener('click', closeDialog);
 
-document.querySelectorAll('.method-list details').forEach(detail => detail.addEventListener('toggle', () => {
-  if (!detail.open) return;
-  document.querySelectorAll('.method-list details').forEach(other => {
-    if (other !== detail) other.open = false;
-  });
-}));
-
 const toast = document.getElementById('toast');
 let toastTimer;
 function showToast(message) {

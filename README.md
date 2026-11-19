@@ -1,8 +1,8 @@
 # Novo site institucional da MCSA
 
-Site estático e responsivo feito em HTML, CSS e JavaScript. Toda a navegação editorial permanece no novo site: os artigos abrem em uma janela interna, o método tem etapas expansíveis e os filtros organizam os conteúdos. O contato usa o telefone público da MCSA; a área de carreiras permite copiar o e-mail de recrutamento.
+Site estático e responsivo feito em HTML, CSS e JavaScript. Os artigos abrem em uma janela interna e podem ser filtrados por assunto. A seção de método permite percorrer as quatro etapas pela rolagem ou pelos atalhos numerados. O contato usa o telefone público da MCSA e a área de carreiras permite copiar o e-mail de recrutamento.
 
-A versão atual traz duas composições ilustrativas geradas a partir dos retratos públicos da equipe: Marcelo Candiotto com Carolina Sant’Ana na página inicial e Marcelo com Rodrigo Valle na seção Sobre. Também inclui animação do título, revelação das seções, números animados, barra de progresso e respostas discretas dos cartões e botões ao ponteiro. O movimento respeita a preferência do sistema por animações reduzidas. A referência de ritmo e interação foi o repositório da VeriSeal: https://github.com/guilhermerezende-hub/-VeriSeal.
+A abertura mostra Marcelo Candiotto com Carolina Sant’Ana, e a seção Sobre mostra Marcelo com Rodrigo Valle. As duas imagens são composições ilustrativas geradas a partir dos retratos públicos da equipe. Na abertura, a foto aproxima-se com a rolagem e a luz acompanha o ponteiro. Na seção de método, uma linha dourada acompanha a leitura. O site respeita a preferência do sistema por movimento reduzido, e a faixa de empresas tem um botão de pausa. As interações foram inspiradas no [site da VeriSeal](https://github.com/guilhermerezende-hub/-VeriSeal).
 
 O destaque principal usa a frase “Seu crédito em foco / Negócios em movimento”. A faixa animada apresenta os nomes de empresas informados pelo cliente: Movida, Localiza, Itaú, Direcional Engenharia, VIC Engenharia, Cyrela, Tenda, Emcamp, DivBank, Tabelionato e LCM.
 
@@ -14,6 +14,7 @@ Abra o `index.html` no navegador. Para testar com um servidor HTTP, execute `npx
 
 - `index.html` contém a página principal.
 - `assets/css/` reúne os estilos do site e das animações.
+- `assets/fonts/` contém a fonte Manrope e sua licença.
 - `assets/js/` reúne os scripts de interação e animação.
 - `assets/images/` agrupa as imagens em `marca/`, `institucional/`, `equipe/` e `reconhecimentos/`.
 - [docs/PROMPTS.md](docs/PROMPTS.md) registra os prompts das composições ilustrativas.
